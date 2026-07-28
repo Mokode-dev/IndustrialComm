@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: |
+            8.0.x
+
+      - name: Restore
+        run: dotnet restore IndustrialComm.sln
+
+      - name: Build
+        run: dotnet build IndustrialComm.sln -c Release --no-restore
+
+      - name: Test
+        run: dotnet test IndustrialComm.sln -c Release --no-build --verbosity normal
+
+      - name: Pack
+        run: dotnet pack src/IndustrialComm.Core/IndustrialComm.Core.csproj -c Release --no-build -o artifacts
+
+      - name: Upload packages
+        uses: actions/upload-artifact@v4
+        with:
+          name: nuget-packages
+          path: artifacts/*.nupkg

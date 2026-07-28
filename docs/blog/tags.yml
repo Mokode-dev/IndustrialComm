@@ -1,0 +1,9 @@
+release:
+  label: Release
+  permalink: /release
+  description: 版本发布
+
+core:
+  label: Core
+  permalink: /core
+  description: IndustrialComm.Core

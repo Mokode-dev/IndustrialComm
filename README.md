@@ -1,5 +1,9 @@
 # IndustrialComm
 
+<p align="center">
+  <img src="assets/logo.png" alt="Indulink / IndustrialComm" width="280" />
+</p>
+
 生产级 .NET 工业通信中间件生态。统一传输、二进制、校验、帧缓冲、结果模型和诊断抽象，协议实现可插拔。
 
 | 包 | 状态 | 说明 |

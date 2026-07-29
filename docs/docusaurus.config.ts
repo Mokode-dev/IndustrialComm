@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'IndustrialComm',
   tagline: '生产级 .NET 工业通信中间件生态',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/logo.png',
 
   future: {
     v4: true,
@@ -51,15 +51,15 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/logo.png',
     colorMode: {
       respectPrefersColorScheme: true,
     },
     navbar: {
       title: 'IndustrialComm',
       logo: {
-        alt: 'IndustrialComm',
-        src: 'img/logo.svg',
+        alt: 'Indulink / IndustrialComm',
+        src: 'img/logo.png',
       },
       items: [
         {

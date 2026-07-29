@@ -2,9 +2,9 @@
 title: Core 概览
 ---
 
-# IndustrialComm.Core
+# Mokode.IndustrialComm.Core
 
-生态的第一个生产级 NuGet 包，为所有协议与应用层提供统一地基。
+生态的第一个生产级 NuGet 包（程序集名仍为 `IndustrialComm.Core`），为所有协议与应用层提供统一地基。
 
 ## 模块
 
@@ -28,7 +28,7 @@ title: Core 概览
 ## 安装
 
 ```bash
-dotnet add package IndustrialComm.Core
+dotnet add package Mokode.IndustrialComm.Core
 ```
 
 ## 不在 Core 中的内容

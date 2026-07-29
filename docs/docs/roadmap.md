@@ -6,7 +6,7 @@ title: 路线图
 
 | 阶段 | 交付物 | 状态 |
 |------|--------|------|
-| P0 | `IndustrialComm.Core` 1.0 | ✅ 完成 |
+| P0 | `Mokode.IndustrialComm.Core` 1.0 | ✅ 完成 |
 | P1 | `IndustrialComm.Modbus`（RTU/ASCII/TCP） | 规划 |
 | P2 | `IndustrialComm.Devices` | 规划 |
 | P3 | MQTT 或 OPC UA（按需求） | 规划 |

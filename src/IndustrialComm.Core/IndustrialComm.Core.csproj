@@ -5,7 +5,7 @@
     <RootNamespace>IndustrialComm</RootNamespace>
     <AssemblyName>IndustrialComm.Core</AssemblyName>
     <Description>Production-grade foundation for the IndustrialComm ecosystem: binary I/O, checksums, framing buffers, transport abstractions, results/errors, reliability policies, and diagnostics.</Description>
-    <PackageId>IndustrialComm.Core</PackageId>
+    <PackageId>Mokode.IndustrialComm.Core</PackageId>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <IsPackable>true</IsPackable>
     <IsAotCompatible Condition="$([MSBuild]::IsTargetFrameworkCompatible('$(TargetFramework)', 'net8.0'))">true</IsAotCompatible>

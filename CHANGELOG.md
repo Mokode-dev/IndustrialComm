@@ -9,7 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- `IndustrialComm.Core` foundation package for the IndustrialComm ecosystem.
+- `Mokode.IndustrialComm.Core` foundation package for the IndustrialComm ecosystem
+  (assembly name: `IndustrialComm.Core`).
 - Binary helpers: endian-aware readers/writers, bit packing, BCD conversion.
 - Checksums: CRC-16/Modbus, CRC-16/CCITT-FALSE, CRC-32, LRC.
 - Framing: ring frame buffer and pluggable frame detectors (fixed length, length-prefix, delimiter).

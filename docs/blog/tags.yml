@@ -6,4 +6,4 @@ release:
 core:
   label: Core
   permalink: /core
-  description: IndustrialComm.Core
+  description: Mokode.IndustrialComm.Core

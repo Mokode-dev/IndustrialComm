@@ -8,7 +8,7 @@
 
 | 包 | 状态 | 说明 |
 |----|------|------|
-| **IndustrialComm.Core** | ✅ 1.0.0 | 生态地基 |
+| **Mokode.IndustrialComm.Core** | ✅ 1.0.0 | 生态地基（程序集名 IndustrialComm.Core） |
 | IndustrialComm.Modbus | 规划中 | Modbus RTU/ASCII/TCP |
 | IndustrialComm.Devices | 规划中 | 设备 / 点位抽象 |
 | IndustrialComm.Hosting | 规划中 | DI / 后台采集 Host |
@@ -27,7 +27,7 @@
 ## 快速开始
 
 ```bash
-dotnet add package IndustrialComm.Core
+dotnet add package Mokode.IndustrialComm.Core
 ```
 
 ```csharp

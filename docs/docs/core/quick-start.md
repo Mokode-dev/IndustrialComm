@@ -7,7 +7,7 @@ title: 快速开始
 ## 安装
 
 ```bash
-dotnet add package IndustrialComm.Core
+dotnet add package Mokode.IndustrialComm.Core
 ```
 
 ## CRC 与二进制

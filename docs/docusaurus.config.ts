@@ -94,7 +94,7 @@ const config: Config = {
         {
           title: '包',
           items: [
-            {label: 'IndustrialComm.Core', to: '/docs/core/overview'},
+            {label: 'Mokode.IndustrialComm.Core', to: '/docs/core/overview'},
             {label: '路线图', to: '/docs/roadmap'},
           ],
         },
@@ -103,7 +103,7 @@ const config: Config = {
           items: [
             {label: 'GitHub', href: 'https://github.com/Mokode-dev/IndustrialComm'},
             {label: 'Gitee', href: 'https://gitee.com/mokode/industrial-comm'},
-            {label: 'NuGet', href: 'https://www.nuget.org/packages/IndustrialComm.Core'},
+            {label: 'NuGet', href: 'https://www.nuget.org/packages/Mokode.IndustrialComm.Core'},
           ],
         },
       ],

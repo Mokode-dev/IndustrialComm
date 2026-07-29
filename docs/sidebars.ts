@@ -5,7 +5,7 @@ const sidebars: SidebarsConfig = {
     'intro',
     {
       type: 'category',
-      label: 'IndustrialComm.Core',
+      label: 'Mokode.IndustrialComm.Core',
       collapsed: false,
       items: [
         'core/overview',

@@ -14,7 +14,7 @@ const config: Config = {
   url: 'https://industrialcomm.github.io',
   baseUrl: '/',
 
-  organizationName: 'IndustrialComm',
+  organizationName: 'Mokode-dev',
   projectName: 'IndustrialComm',
 
   onBrokenLinks: 'throw',
@@ -31,7 +31,7 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           routeBasePath: 'docs',
-          editUrl: 'https://github.com/IndustrialComm/IndustrialComm/tree/main/docs/',
+          editUrl: 'https://github.com/Mokode-dev/IndustrialComm/tree/main/docs/',
         },
         blog: {
           showReadingTime: true,
@@ -70,8 +70,13 @@ const config: Config = {
         },
         {to: '/blog', label: '博客', position: 'left'},
         {
-          href: 'https://github.com/IndustrialComm/IndustrialComm',
+          href: 'https://github.com/Mokode-dev/IndustrialComm',
           label: 'GitHub',
+          position: 'right',
+        },
+        {
+          href: 'https://gitee.com/mokode/industrial-comm',
+          label: 'Gitee',
           position: 'right',
         },
       ],
@@ -96,12 +101,13 @@ const config: Config = {
         {
           title: '更多',
           items: [
-            {label: 'GitHub', href: 'https://github.com/IndustrialComm/IndustrialComm'},
+            {label: 'GitHub', href: 'https://github.com/Mokode-dev/IndustrialComm'},
+            {label: 'Gitee', href: 'https://gitee.com/mokode/industrial-comm'},
             {label: 'NuGet', href: 'https://www.nuget.org/packages/IndustrialComm.Core'},
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} IndustrialComm Contributors. MIT License.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Mokode. MIT License.`,
     },
     prism: {
       theme: prismThemes.github,

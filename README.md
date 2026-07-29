@@ -11,6 +11,15 @@
 
 文档站点（Docusaurus）：见 [`docs/`](docs/)。
 
+## 仓库
+
+| 平台 | 地址 |
+|------|------|
+| GitHub | https://github.com/Mokode-dev/IndustrialComm |
+| Gitee | https://gitee.com/mokode/industrial-comm |
+
+作者：**Mokode**
+
 ## 快速开始
 
 ```bash

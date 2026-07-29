@@ -10,12 +10,12 @@
     <Deterministic>true</Deterministic>
     <ContinuousIntegrationBuild Condition="'$(CI)' == 'true'">true</ContinuousIntegrationBuild>
 
-    <Authors>IndustrialComm Contributors</Authors>
+    <Authors>Mokode</Authors>
     <Company>IndustrialComm</Company>
-    <Copyright>Copyright (c) IndustrialComm Contributors</Copyright>
+    <Copyright>Copyright (c) Mokode</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/IndustrialComm/IndustrialComm</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/IndustrialComm/IndustrialComm</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Mokode-dev/IndustrialComm</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Mokode-dev/IndustrialComm</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>industrial;plc;modbus;opcua;scada;iot;communication</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>

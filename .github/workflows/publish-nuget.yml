@@ -1,0 +1,68 @@
+# NuGet Trusted Publishing (OIDC) — no long-lived API key in secrets.
+# Setup:
+# 1. nuget.org → Trusted Publishing → add policy:
+#      Repository owner: Mokode-dev
+#      Repository:       IndustrialComm
+#      Workflow file:    publish-nuget.yml
+#      Environment:      (leave empty, or set "nuget" and match job.environment below)
+# 2. GitHub repo Settings → Secrets → Actions:
+#      NUGET_USER = your nuget.org profile username (not email)
+# 3. Trigger: push a version tag, e.g. git tag v1.0.0 && git push origin v1.0.0
+#    Or run this workflow manually (Actions → Publish NuGet → Run workflow).
+#
+# Docs: https://learn.microsoft.com/nuget/nuget-org/trusted-publishing
+
+name: Publish NuGet
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    # Optional: create GitHub Environment "nuget" and set the same name in nuget.org policy
+    # environment: nuget
+    permissions:
+      id-token: write   # required for OIDC → temporary NuGet API key
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: |
+            8.0.x
+
+      - name: Restore
+        run: dotnet restore IndustrialComm.sln
+
+      - name: Build
+        run: dotnet build IndustrialComm.sln -c Release --no-restore
+
+      - name: Test
+        run: dotnet test IndustrialComm.sln -c Release --no-build --verbosity normal
+
+      - name: Pack
+        run: dotnet pack src/IndustrialComm.Core/IndustrialComm.Core.csproj -c Release --no-build -o artifacts
+
+      - name: NuGet login (Trusted Publishing)
+        id: nuget
+        uses: NuGet/login@v1
+        with:
+          user: ${{ secrets.NUGET_USER }}
+
+      - name: Push to nuget.org
+        run: |
+          dotnet nuget push artifacts/*.nupkg \
+            --api-key "${{ steps.nuget.outputs.NUGET_API_KEY }}" \
+            --source https://api.nuget.org/v3/index.json \
+            --skip-duplicate
